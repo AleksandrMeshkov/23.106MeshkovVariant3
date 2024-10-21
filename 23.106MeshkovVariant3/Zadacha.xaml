@@ -1,0 +1,38 @@
+﻿<Window x:Class="_23._106MeshkovVariant3.Zadacha"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_23._106MeshkovVariant3"
+        mc:Ignorable="d"
+        Title="Zadacha" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Content="Размер массива (N):"/>
+        <TextBox x:Name="textBoxN" Grid.Column="1" Grid.Row="0" Width="200" Height="25" Margin="10"/>
+
+        <Label Grid.Column="0" Grid.Row="1" Content="Нижняя граница диапазона:"/>
+        <TextBox x:Name="textBoxMin" Grid.Column="1" Grid.Row="1" Width="200" Height="25" Margin="10"/>
+
+        <Label Grid.Column="0" Grid.Row="2" Content="Верхняя граница диапазона:"/>
+        <TextBox x:Name="textBoxMax" Grid.Column="1" Grid.Row="2" Width="200" Height="25" Margin="10"/>
+
+        <Button Grid.Column="1" Grid.Row="3" Content="Сгенерировать и отсортировать" Click="Button_Click" Width="150" Margin="10"/>
+
+        <TextBox x:Name="outputTextBox" Grid.Column="1" Grid.Row="4" Width="400" Height="100" Margin="10" IsReadOnly="True"/>
+
+        <TextBox x:Name="errorTextBox" Grid.Column="1" Grid.Row="5" Width="400" Height="25" Margin="10" IsReadOnly="True" Foreground="Red"/>
+    </Grid>
+</Window>
